@@ -1,13 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const siteProps = {
-  name: "Sandra",
-  surname: "León - Del Risco",
-  title: "Software Engineer",
+  name: {
+    value: "Sandra",
+    color: "#FF5733"
+  },
+  surname: {
+    value: "León - Del Risco",
+    color: "#FF3357"
+  },
+  title: {
+    value: "Software Engineer",
+    color: "#33FF57"
+  },
   organization: "Accenture",
   chapter: "Frontend",
-  email: "sandradev@mimail.com",
+  email: {
+    value: "sandradev@mimail.com",
+    color: "#3357FF"
+  },
   country: "Spain",
   city: "Málaga",
   age: "51",
@@ -31,14 +45,23 @@ function App() {
           Learn React
         </a>
         <div>
-          <h1>{siteProps.name}</h1>
-          <h2>{siteProps.title}</h2>
-          <p>{siteProps.email}</p>
+          <h1 style={{ color: siteProps.name.color }}>{siteProps.name.value}</h1>
+          <h3 style={{ color: siteProps.surname.color }}>{siteProps.surname.value}</h3>
+          <h2 style={{ color: siteProps.title.color }}>{siteProps.title.value}</h2>
+          <p style={{ color: siteProps.email.color }}>{siteProps.email.value}</p>
         </div>
-        <div className="social-icons">
-          <i className="social-icon fab fa-facebook"></i>
-          <i className="social-icon fab fa-twitter"></i>
-          <i className="social-icon fab fa-linkedin"></i>
+        <div>
+          <p>Organization: {siteProps.organization}</p>
+          <p>Chapter: {siteProps.chapter}</p>
+          <p>Country: {siteProps.country}</p>
+          <p>City: {siteProps.city}</p>
+          <p>Age: {siteProps.age}</p>
+          <p>
+            LinkedIn: 
+            <a href={siteProps.linkedin}>
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+          </p>
         </div>
       </header>
     </div>
