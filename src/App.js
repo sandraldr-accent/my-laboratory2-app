@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faFacebook, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const siteProps = {
   name: {
@@ -23,9 +23,7 @@ const siteProps = {
     color: "#3357FF"
   },
   country: "Spain",
-  city: "Málaga",
-  age: "51",
-  linkedin: "https://www.linkedin.com/in/sandra-león-del-risco-3a8a4b1b1/",
+  linkedin: "https://www.linkedin.com"
 };
 
 function App() {
@@ -54,14 +52,23 @@ function App() {
           <p>Organization: {siteProps.organization}</p>
           <p>Chapter: {siteProps.chapter}</p>
           <p>Country: {siteProps.country}</p>
-          <p>City: {siteProps.city}</p>
-          <p>Age: {siteProps.age}</p>
-          <p>
-            LinkedIn: 
-            <a href={siteProps.linkedin}>
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-          </p>
+        </div>
+        <div className="social-icons">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faFacebook} className="social-icon" />
+          </a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+          </a>
+          <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faGithub} className="social-icon" />
+          </a>
+          <a href={siteProps.linkedin} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
+          </a>
         </div>
       </header>
     </div>
