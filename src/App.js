@@ -10,6 +10,7 @@ const siteProps = {
   email: "sandradev@mimail.com",
   country: "Spain",
   city: "Málaga",
+  age: "51",
   linkedin: "https://www.linkedin.com/in/sandra-león-del-risco-3a8a4b1b1/",
 };
 
