@@ -35,6 +35,11 @@ function App() {
           <h2>{siteProps.title}</h2>
           <p>{siteProps.email}</p>
         </div>
+        <div className="social-icons">
+          <i className="social-icon fab fa-facebook"></i>
+          <i className="social-icon fab fa-twitter"></i>
+          <i className="social-icon fab fa-linkedin"></i>
+        </div>
       </header>
     </div>
   );
